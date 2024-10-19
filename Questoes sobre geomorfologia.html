@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões de Geomorfologia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto;
+            position: relative;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .question h2 {
+            color: #333;
+        }
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+        .wrong {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function checkAnswer(question, correctAnswer) {
+            const options = document.getElementsByName(question);
+            let isCorrect = false;
+
+            for (let i = 0; i < options.length; i++) {
+                const option = options[i];
+                if (option.checked) {
+                    if (option.value === correctAnswer) {
+                        option.parentNode.classList.add("correct");
+                        isCorrect = true;
+                    } else {
+                        option.parentNode.classList.add("wrong");
+                    }
+                } else {
+                    if (option.value === correctAnswer) {
+                        option.parentNode.classList.add("correct");
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Questões de Geomorfologia</h1>
+    </header>
+    <div class="container">
+        <div class="question">
+            <h2>1. A Geomorfologia é a ciência que estuda:</h2>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="a"> a) A composição química dos solos.</li>
+                <li><input type="radio" name="q1" value="b"> b) A formação e modificação do relevo terrestre.</li>
+                <li><input type="radio" name="q1" value="c"> c) A distribuição da vegetação no planeta.</li>
+                <li><input type="radio" name="q1" value="d"> d) As características climáticas das diferentes regiões.</li>
+            </ul>
+            <button onclick="checkAnswer('q1', 'b')">Enviar Resposta</button>
+        </div>
+        <div class="question">
+            <h2>2. Os movimentos convergentes das placas tectônicas são responsáveis por:</h2>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="a"> a) Formação de falhas e terremotos em zonas de subducção.</li>
+                <li><input type="radio" name="q2" value="b"> b) Erosão de montanhas e formação de planícies.</li>
+                <li><input type="radio" name="q2" value="c"> c) Expansão dos fundos oceânicos.</li>
+                <li><input type="radio" name="q2" value="d"> d) Movimentação de sedimentos ao longo dos rios.</li>
+            </ul>
+            <button onclick="checkAnswer('q2', 'a')">Enviar Resposta</button>
+        </div>
+        <div class="question">
+            <h2>3. Intemperismo químico pode ser observado quando:</h2>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="a"> a) O vento desgasta as rochas com partículas de areia.</li>
+                <li><input type="radio" name="q3" value="b"> b) A água da chuva reage com minerais presentes nas rochas.</li>
+                <li><input type="radio" name="q3" value="c"> c) As rochas se fragmentam devido ao congelamento da água.</li>
+                <li><input type="radio" name="q3" value="d"> d) As raízes das plantas rompem camadas de solo.</li>
+            </ul>
+            <button onclick="checkAnswer('q3', 'b')">Enviar Resposta</button>
+        </div>
+        <div class="question">
+            <h2>4. Qual das seguintes formações geológicas é resultado da ação glacial?</h2>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="a"> a) Dunas de areia.</li>
+                <li><input type="radio" name="q4" value="b"> b) Fissuras vulcânicas.</li>
+                <li><input type="radio" name="q4" value="c"> c) Fiordes.</li>
+                <li><input type="radio" name="q4" value="d"> d) Cânions fluviais.</li>
+            </ul>
+            <button onclick="checkAnswer('q4', 'c')">Enviar Resposta</button>
+        </div>
+        <div class="question">
+            <h2>5. A teoria da Deriva Continental, proposta por Alfred Wegener, sugere que:</h2>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="a"> a) Os continentes se formaram a partir da ação dos agentes externos de erosão.</li>
+                <li><input type="radio" name="q5" value="b"> b) Os continentes já estiveram unidos em um único supercontinente.</li>
+                <li><input type="radio" name="q5" value="c"> c) As mudanças no relevo terrestre são causadas apenas pelo movimento das placas oceânicas.</li>
+                <li><input type="radio" name="q5" value="d"> d) As atividades humanas influenciam diretamente a separação dos continentes.</li>
+            </ul>
+            <button onclick="checkAnswer('q5', 'b')">Enviar Resposta</button>
+        </div>
+        <div class="question">
+            <h2>6. A erosão fluvial é mais comum em áreas com:</h2>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="a"> a) Clima desértico e seco.</li>
+                <li><input type="radio" name="q6" value="b"> b) Altitude elevada e montanhas.</li>
+                <li><input type="radio" name="q6" value="c"> c) Solo arenoso e sedimentar.</li>
+                <li><input type="radio" name="q6" value="d"> d) Baixa precipitação e planícies.</li>
+            </ul>
+            <button onclick="checkAnswer('q6', 'b')">Enviar Resposta</button>
+        </div>
+        <div class="question">
+            <h2>7. O intemperismo biológico ocorre quando:</h2>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="a"> a) As rochas sofrem desgastes por causa de mudanças na temperatura.</li>
+                <li><input type="radio" name="q7" value="b"> b) As atividades de organismos vivos, como plantas e microrganismos, alteram as rochas.</li>
+                <li><input type="radio" name="q7" value="c"> c) As reações químicas entre água e minerais quebram as rochas.</li>
+                <li><input type="radio" name="q7" value="d"> d) O vento causa erosão em superfícies expostas.</li>
+            </ul>
+            <button onclick="checkAnswer('q7', 'b')">Enviar Resposta</button>
+        </div>
+        <div class="question">
+            <h2>8. Os agentes endógenos são aqueles que:</h2>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="a"> a) Promovem a erosão e sedimentação na superfície terrestre.</li>
+                <li><input type="radio" name="q8" value="b"> b) São causados pelo intemperismo biológico.</li>
+                <li><input type="radio" name="q8" value="c"> c) Agem a partir de processos que ocorrem no interior da Terra, como vulcanismo e tectonismo.</li>
+                <li><input type="radio" name="q8" value="d"> d) São resultados das atividades antrópicas no meio ambiente.</li>
+            </ul>
+            <button onclick="checkAnswer('q8', 'c')">Enviar Resposta</button>
+        </div>
+        <div class="question">
+            <h2>9. A ação do mar sobre o relevo costeiro é conhecida como:</h2>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="a"> a) Intemperismo marinho.</li>
+                <li><input type="radio" name="q9" value="b"> b) Erosão pluvial.</li>
+                <li><input type="radio" name="q9" value="c"> c) Erosão marinha.</li>
+                <li><input type="radio" name="q9" value="d"> d) Sedimentação costeira.</li>
+            </ul>
+            <button onclick="checkAnswer('q9', 'c')">Enviar Resposta</button>
+        </div>
+        <div class="question">
+            <h2>10. A formação de uma falha geológica ocorre devido a:</h2>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="a"> a) Movimentos divergentes de placas tectônicas que se afastam.</li>
+                <li><input type="radio" name="q10" value="b"> b) Erosão de grandes massas de terra ao longo do tempo.</li>
+                <li><input type="radio" name="q10" value="c"> c) Compressão de placas tectônicas em movimento convergente.</li>
+                <li><input type="radio" name="q10" value="d"> d) Intemperismo químico e biológico agindo conjuntamente.</li>
+            </ul>
+            <button onclick="checkAnswer('q10', 'c')">Enviar Resposta</button>
+        </div>
+        <div class="question">
+            <h2>11. (ENEM 2023) A Cordilheira do Himalaia é formada devido ao encontro entre placas tectônicas. Esse movimento é um exemplo de:</h2>
+            <ul class="options">
+                <li><input type="radio" name="q11" value="a"> a) Movimento divergente.</li>
+                <li><input type="radio" name="q11" value="b"> b) Movimento convergente.</li>
+                <li><input type="radio" name="q11" value="c"> c) Falhamento transformante.</li>
+                <li><input type="radio" name="q11" value="d"> d) Expansão oceânica.</li>
+                <li><input type="radio" name="q11" value="e"> e) Ação do intemperismo físico.</li>
+            </ul>
+            <button onclick="checkAnswer('q11', 'b')">Enviar Resposta</button>
+        </div>
+        <div class="question">
+            <h2>12. (IFBA) As principais formas de relevo terrestre são estruturadas em três grandes categorias geológicas. Essas categorias incluem:</h2>
+            <ul class="options">
+                <li><input type="radio" name="q12" value="a"> a) Escudos cristalinos, bacias sedimentares e dobramentos antigos.</li>
+                <li><input type="radio" name="q12" value="b"> b) Escudos sedimentares, bacias cristalinas e dobramentos modernos.</li>
+                <li><input type="radio" name="q12" value="c"> c) Planícies aluviais, dobramentos recentes e bacias cársticas.</li>
+                <li><input type="radio" name="q12" value="d"> d) Bacias sedimentares, bacias cristalinas e dobramentos antigos.</li>
+                <li><input type="radio" name="q12" value="e"> e) Escudos sedimentares, falhas tectônicas e dobramentos modernos.</li>
+            </ul>
+            <button onclick="checkAnswer('q12', 'a')">Enviar Resposta</button>
+        </div>
+        <div class="question">
+            <h2>13. (UFRGS) Com base na Teoria da Tectônica de Placas, quais das alternativas estão corretas sobre a fragmentação da litosfera?</h2>
+            <ul class="options">
+                <li><input type="radio" name="q13" value="a"> a) Apenas a litosfera está fragmentada em placas rígidas que não se movimentam.</li>
+                <li><input type="radio" name="q13" value="b"> b) As placas tectônicas são movidas por correntes de convecção do manto, influenciando o relevo terrestre.</li>
+                <li><input type="radio" name="q13" value="c"> c) Os limites das placas tectônicas não apresentam relevos específicos, como cadeias de montanhas ou vulcões.</li>
+                <li><input type="radio" name="q13" value="d"> d) O movimento das placas tectônicas não afeta os padrões de atividade sísmica.</li>
+                <li><input type="radio" name="q13" value="e"> e) A ação do vento é a principal causa do movimento das placas.</li>
+            </ul>
+            <button onclick="checkAnswer('q13', 'b')">Enviar Resposta</button>
+        </div>
+        <div class="question">
+            <h2>14. (ENEM 2017) No contexto do intemperismo, o processo pelo qual os minerais das rochas sofrem decomposição química é predominante em regiões de:</h2>
+            <ul class="options">
+                <li><input type="radio" name="q14" value="a"> a) Clima árido, com alta amplitude térmica.</li>
+                <li><input type="radio" name="q14" value="b"> b) Baixa precipitação e temperaturas extremamente frias.</li>
+                <li><input type="radio" name="q14" value="c"> c) Clima tropical úmido, com abundância de água.</li>
+                <li><input type="radio" name="q14" value="d"> d) Regiões polares, onde a ação do gelo prevalece.</li>
+                <li><input type="radio" name="q14" value="e"> e) Desertos, onde o vento intensifica a erosão física.</li>
+            </ul>
+            <button onclick="checkAnswer('q14', 'c')">Enviar Resposta</button>
+        </div>
+        <div class="question">
+            <h2>15. (UECE) Assinale a opção correta sobre a erosão e os fatores que contribuem para a sua intensidade em diferentes áreas climáticas:</h2>
+            <ul class="options">
+                <li><input type="radio" name="q15" value="a"> a) Nos climas úmidos, a evolução do relevo ocorre predominantemente pela ação do intemperismo físico.</li>
+                <li><input type="radio" name="q15" value="b"> b) A ação fluvial em áreas de alta pluviosidade tende a acelerar o desgaste das encostas e vales.</li>
+                <li><input type="radio" name="q15" value="c"> c) A erosão química predomina em desertos devido às variações de temperatura.</li>
+                <li><input type="radio" name="q15" value="d"> d) Em áreas com alta densidade vegetal, a erosão é mais intensa.</li>
+                <li><input type="radio" name="q15" value="e"> e) A ação das geleiras não afeta significativamente a erosão em regiões frias.</li>
+            </ul>
+            <button onclick="checkAnswer('q15', 'b')">Enviar Resposta</button>
+        </div>
+        <div class="question">
+            <h2>16. (ENEM 2020)</h2>
+            <p>Qual das alternativas caracteriza um processo de erosão causado pelo intemperismo biológico?</p>
+            <ul class="options"
+                <li><input type="radio" name="q16" value="a"> a) O desgaste causado pela água do mar em falésias costeiras.</li>
+                <li><input type="radio" name="q16" value="b"> b) Fragmentação das rochas devido ao crescimento de raízes em suas fissuras.</li>
+                <li><input type="radio" name="q16" value="c"> c) Formação de dunas em áreas desérticas pela ação do vento.</li>
+                <li><input type="radio" name="q16" value="d"> d) Desgaste químico das rochas por ácidos presentes na chuva.</li>
+                <li><input type="radio" name="q16" value="e"> e) Movimentação de gelo em áreas polares, fraturando a superfície rochosa.</li>
+            </ul>
+            <button onclick="checkAnswer('q16', 'b')">Enviar Resposta</button>
+        </div>
+        
+        <div class="question">
+            <h2>17. (ESPCEX)</h2>
+            <p>Os agentes internos que atuam na formação do relevo são conhecidos como forças endógenas. Sobre essas forças, é correto afirmar que:</p>
+                <ul class="options">
+                <li><input type="radio" name="q17" value="a" > a) Atuam na superfície terrestre através de processos como vulcanismo e tectonismo.</li>
+                <li><input type="radio" name="q17" value="b"> b) São exclusivamente responsáveis pela erosão das cadeias montanhosas.</li>
+                <li><input type="radio" name="q17" value="c"> c) Não afetam as formações geológicas das bacias sedimentares.</li>
+                <li><input type="radio" name="q17" value="d" > d) Contribuem para a formação de escudos cristalinos através de intemperismo.</li>
+                <li><input type="radio" name="q17" value="e" > e) São menos influentes que os agentes exógenos.</li>
+            </ul>
+            <button onclick="checkAnswer('q17', 'a')">Enviar Resposta</button>
+        </div>
+        
+        <div class="question">
+            <h2>18. (UNESP)</h2>
+            <p>A formação de fiordes e outros vales glaciais resulta principalmente da ação de:</p>
+            <ul class="options">
+                <li><input type="radio" name="q18" value="a" > a) Correntes de vento em regiões áridas.</li>
+                <li><input type="radio" name="q18" value="b" > b) Fluxo de lava vulcânica.</li>
+                <li><input type="radio" name="q18" value="c"> c) Movimentação de geleiras que esculpem as rochas.</li>
+                <li><input type="radio" name="q18" value="d" > d) Deposição de sedimentos fluviais.</li>
+                <li><input type="radio" name="q18" value="e" > e) Intemperismo químico em áreas montanhosas.</li>
+            </ul>
+            <button onclick="checkAnswer('q18', 'c')">Enviar Resposta</button>
+        </div>
+        
+        <div class="question">
+            <h2>19. (ENEM 2015)</h2>
+            <p>O intemperismo físico é mais intenso em regiões:</p>
+            <ul class="options">
+
+                <li><input type="radio" name="q19" value="a" > a) De clima tropical úmido, com forte presença de vegetação.</li>
+                <li><input type="radio" name="q19" value="b" > b) De clima árido ou semiárido, onde há alta variação de temperatura.</li>
+                <li><input type="radio" name="q19" value="c" > c) Com alta pluviosidade, devido à ação constante da água.</li>
+                <li><input type="radio" name="q19" value="d" > d) Polares, com baixa amplitude térmica.</li>
+                <li><input type="radio" name="q19" value="e" > e) De alta latitude, com temperaturas médias constantes.</li>
+            </ul>
+            <button onclick="checkAnswer('q19', 'b')">Enviar Resposta</button>
+        </div>
+        
+        <div class="question">
+            <h2>20. (FAMERP)</h2>
+            <p>A região do Mar Morto, localizada a cerca de -395 metros abaixo do nível do mar, é um exemplo de:</p>
+            <ul class="options">
+                <li><input type="radio" name="q20" value="a"> a) Planície litorânea.</li>
+                <li><input type="radio" name="q20" value="b" > b) Depressão absoluta.</li>
+                <li><input type="radio" name="q20" value="c" > c) Vale tectônico.</li>
+                <li><input type="radio" name="q20" value="d" > d) Bacia sedimentar.</li>
+                <li><input type="radio" name="q20" value="e"> e) Falha geológica.</li>
+            </ul>
+            <button onclick="checkAnswer('q20', 'b')">Enviar Resposta</button>
+        </div>
+        
