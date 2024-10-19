@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTÕES SOBRE PORCENTAGEM E JUROS SIMPLES</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto;
+            position: relative;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .question h2 {
+            color: #333;
+        }
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+        .wrong {
+            color: red;
+            font-weight: bold;
+        }
+        .resolution {
+            margin-top: 10px;
+            font-style: italic;
+            display: none; /* Escondido inicialmente */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>QUESTÕES SOBRE PORCENTAGEM E JUROS SIMPLES</h1>
+    </header>
+
+    <div class="container">
+        <!-- Questão 1 -->
+        <div class="question">
+            <h2>1. Joana investiu R$ 3.000,00 em uma aplicação que rende 6% ao ano de juros simples. Após dois anos, ela precisa de um valor total de R$ 3.600,00 para realizar uma compra. O valor acumulado será suficiente para cobrir a compra ou ela precisará complementar com dinheiro próprio?</h2>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="a">a) Ela terá exatamente o valor necessário.</li>
+                <li><input type="radio" name="q1" value="b">b) Ela precisará de R$ 300,00 a mais.</li>
+                <li><input type="radio" name="q1" value="c">c) Ela terá R$ 300,00 a menos.</li>
+                <li><input type="radio" name="q1" value="d">d) Ela precisará de R$ 600,00 a mais.</li>
+            </ul>
+            <button onclick="checkAnswer('q1', 'b', 'Resolução: Juros = R$ 3.000,00 * 0,06 * 2 = R$ 360,00. Montante = R$ 3.000,00 + R$ 360,00 = R$ 3.360,00. Portanto, ela precisará complementar R$ 240,00.')">Enviar Resposta</button>
+            <div class="resolution" id="res-q1"></div>
+        </div>
+
+        <!-- Questão 2 -->
+        <div class="question">
+            <h2>2. Durante uma promoção, uma loja oferece 20% de desconto em todos os produtos. Se um eletrodoméstico custa R$ 800,00, qual será o valor pago após o desconto? Além disso, se o imposto de 10% for aplicado sobre o preço com desconto, qual será o preço final?</h2>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="a">a) R$ 720,00</li>
+                <li><input type="radio" name="q2" value="b">b) R$ 792,00</li>
+                <li><input type="radio" name="q2" value="c">c) R$ 800,00</li>
+                <li><input type="radio" name="q2" value="d">d) R$ 850,00</li>
+            </ul>
+            <button onclick="checkAnswer('q2', 'b', 'Resolução: Desconto = R$ 800,00 * 0,20 = R$ 160,00. Preço com desconto = R$ 800,00 - R$ 160,00 = R$ 640,00. Imposto = R$ 640,00 * 0,10 = R$ 64,00. Preço final = R$ 640,00 + R$ 64,00 = R$ 704,00.')">Enviar Resposta</button>
+            <div class="resolution" id="res-q2"></div>
+        </div>
+
+        <!-- Questão 3 -->
+        <div class="question">
+            <h2>3. João recebeu um aumento de 10% e, com isso, seu salário chegou a R$ 1.320,00. Qual era o salário de João antes do aumento?</h2>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="a">a) R$ 1.200,00</li>
+                <li><input type="radio" name="q3" value="b">b) R$ 1.188,00</li>
+                <li><input type="radio" name="q3" value="c">c) R$ 1.150,00</li>
+                <li><input type="radio" name="q3" value="d">d) R$ 1.250,00</li>
+            </ul>
+            <button onclick="checkAnswer('q3', 'a', 'Resolução: Salário anterior = R$ 1.320,00 / 1,10 = R$ 1.200,00.')">Enviar Resposta</button>
+            <div class="resolution" id="res-q3"></div>
+        </div>
+
+        <!-- Questão 4 -->
+        <div class="question">
+            <h2>4. Em um condomínio, 40% dos moradores são crianças. Se o condomínio tem 250 moradores, quantas crianças residem nele?</h2>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="a">a) 80 crianças</li>
+                <li><input type="radio" name="q4" value="b">b) 100 crianças</li>
+                <li><input type="radio" name="q4" value="c">c) 90 crianças</li>
+                <li><input type="radio" name="q4" value="d">d) 110 crianças</li>
+            </ul>
+            <button onclick="checkAnswer('q4', 'b', 'Resolução: Número de crianças = 250 * 0,40 = 100 crianças.')">Enviar Resposta</button>
+            <div class="resolution" id="res-q4"></div>
+        </div>
+
+        <!-- Questão 5 -->
+        <div class="question">
+            <h2>5. Tarcísio tomou emprestado R$ 2.400,00 do banco e vai pagar o empréstimo em 6 meses, com juros de 4% ao mês. Qual será a quantia total a ser paga ao final do prazo?</h2>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="a">a) R$ 2.880,00</li>
+                <li><input type="radio" name="q5" value="b">b) R$ 2.800,00</li>
+                <li><input type="radio" name="q5" value="c">c) R$ 3.000,00</li>
+                <li><input type="radio" name="q5" value="d">d) R$ 3.200,00</li>
+            </ul>
+            <button onclick="checkAnswer('q5', 'a', 'Resolução: Juros = R$ 2.400,00 * 0,04 * 6 = R$ 576,00. Total = R$ 2.400,00 + R$ 576,00 = R$ 2.976,00.')">Enviar Resposta</button>
+            <div class="resolution" id="res-q5"></div>
+        </div>
+
+               <!-- Questão 6 -->
+               <div class="question">
+                <h2>6. Um estudante obteve 75% de acertos em uma prova de matemática, que continha 40 questões. Quantas questões ele acertou?</h2>
+                <ul class="options">
+                    <li><input type="radio" name="q6" value="a">a) 30 questões</li>
+                    <li><input type="radio" name="q6" value="b">b) 28 questões</li>
+                    <li><input type="radio" name="q6" value="c">c) 25 questões</li>
+                    <li><input type="radio" name="q6" value="d">d) 35 questões</li>
+                </ul>
+                <button onclick="checkAnswer('q6', 'a', 'Resolução: Acertos = 75% de 40 = 0,75 * 40 = 30 questões.')">Enviar Resposta</button>
+                <div class="resolution" id="res-q6"></div>
+            </div>
+    
+            <!-- Questão 7 -->
+            <div class="question">
+                <h2>7. Maria comprou um vestido por R$ 200,00, mas após alguns dias, ela encontrou o mesmo vestido em uma loja que oferecia 25% de desconto. Quanto ela economizaria se tivesse comprado na nova loja?</h2>
+                <ul class="options">
+                    <li><input type="radio" name="q7" value="a">a) R$ 25,00</li>
+                    <li><input type="radio" name="q7" value="b">b) R$ 50,00</li>
+                    <li><input type="radio" name="q7" value="c">c) R$ 75,00</li>
+                    <li><input type="radio" name="q7" value="d">d) R$ 100,00</li>
+                </ul>
+                <button onclick="checkAnswer('q7', 'b', 'Resolução: Desconto = 25% de R$ 200,00 = 0,25 * 200 = R$ 50,00. Portanto, Maria economizaria R$ 50,00.')">Enviar Resposta</button>
+                <div class="resolution" id="res-q7"></div>
+            </div>
+    
+            <!-- Questão 8 -->
+            <div class="question">
+                <h2>8. Se um investidor aplica R$ 1.000,00 a uma taxa de juros simples de 5% ao ano, qual será a quantia total após 3 anos?</h2>
+                <ul class="options">
+                    <li><input type="radio" name="q8" value="a">a) R$ 1.150,00</li>
+                    <li><input type="radio" name="q8" value="b">b) R$ 1.200,00</li>
+                    <li><input type="radio" name="q8" value="c">c) R$ 1.250,00</li>
+                    <li><input type="radio" name="q8" value="d">d) R$ 1.300,00</li>
+                </ul>
+                <button onclick="checkAnswer('q8', 'a', 'Resolução: Juros = 5% de R$ 1.000,00 = R$ 1.000,00 * 0,05 * 3 = R$ 150,00. Montante = R$ 1.000,00 + R$ 150,00 = R$ 1.150,00.')">Enviar Resposta</button>
+                <div class="resolution" id="res-q8"></div>
+            </div>
+    
+            <!-- Questão 9 -->
+            <div class="question">
+                <h2>9. Um carro que custa R$ 40.000,00 sofreu um aumento de 15% em seu preço. Qual será o novo preço do carro?</h2>
+                <ul class="options">
+                    <li><input type="radio" name="q9" value="a">a) R$ 44.000,00</li>
+                    <li><input type="radio" name="q9" value="b">b) R$ 42.000,00</li>
+                    <li><input type="radio" name="q9" value="c">c) R$ 46.000,00</li>
+                    <li><input type="radio" name="q9" value="d">d) R$ 48.000,00</li>
+                </ul>
+                <button onclick="checkAnswer('q9', 'a', 'Resolução: Aumento = 15% de R$ 40.000,00 = 0,15 * 40.000 = R$ 6.000,00. Novo preço = R$ 40.000,00 + R$ 6.000,00 = R$ 46.000,00.')">Enviar Resposta</button>
+                <div class="resolution" id="res-q9"></div>
+            </div>
+    
+            <!-- Questão 10 -->
+            <div class="question">
+                <h2>10. Se uma loja vende 100 produtos em um dia e tem uma taxa de conversão de 20%, quantos clientes visitaram a loja nesse dia?</h2>
+                <ul class="options">
+                    <li><input type="radio" name="q10" value="a">a) 300 clientes</li>
+                    <li><input type="radio" name="q10" value="b">b) 400 clientes</li>
+                    <li><input type="radio" name="q10" value="c">c) 500 clientes</li>
+                    <li><input type="radio" name="q10" value="d">d) 600 clientes</li>
+                </ul>
+                <button onclick="checkAnswer('q10', 'b', 'Resolução: Taxa de conversão = 20% significa que 20 de cada 100 clientes compraram. Portanto, 100 / 0,20 = 500 clientes visitaram a loja.')">Enviar Resposta</button>
+                <div class="resolution" id="res-q10"></div>
+            </div>
+        </div>
+    
+        <script>
+            function checkAnswer(question, correctAnswer, resolution) {
+                const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+                const resolutionDiv = document.getElementById(`res-${question}`);
+                if (selectedOption) {
+                    const options = document.querySelectorAll(`input[name="${question}"]`);
+                    options.forEach(option => {
+                        const li = option.parentElement;
+                        li.classList.remove('correct', 'wrong');
+                    });
+    
+                    if (selectedOption.value === correctAnswer) {
+                        selectedOption.parentElement.classList.add('correct');
+                    } else {
+                        selectedOption.parentElement.classList.add('wrong');
+                        const correctOption = Array.from(options).find(option => option.value === correctAnswer);
+                        correctOption.parentElement.classList.add('correct');
+                    }
+                    
+                    // Mostrar a resolução
+                    resolutionDiv.textContent = resolution;
+                    resolutionDiv.style.display = 'block'; // Exibir a resolução
+                }
+            }
+        </script>
+    </body>
+    </html>
+    
